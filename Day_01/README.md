@@ -38,4 +38,4 @@ The length of an array can be obtained using the `length` property of the array,
 
 It's important to note that arrays in Java have a fixed size, meaning once you define the size of an array, you cannot change it. If you need a dynamic collection that can grow or shrink, you might consider using other data structures like ArrayList or LinkedList.
 
-I hope this explanation helps you understand the basics of implementing an array in Java for DSA purposes. Let me know if you have any further questions!
+
