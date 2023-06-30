@@ -1,4 +1,4 @@
-Implement a basic implementation of the Data Structures and Algorithms (DSA) concept of an array in Java.
+## Data Structures and Algorithms (DSA) concept of an array in Java.
 
 In Java, an array is a fixed-size collection of elements of the same type. It allows you to store multiple values of the same data type in contiguous memory locations. Each element in the array is accessed using an index, starting from 0.
 
