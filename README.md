@@ -1,4 +1,4 @@
-# Learn-Data-Structures-JAVA
+# Learn Data Structures JAVA
 This tutorial will give you great understanding on Data Structures concepts
 
 provide a brief explanation of some common data structures used in computer science and software development using Java.
