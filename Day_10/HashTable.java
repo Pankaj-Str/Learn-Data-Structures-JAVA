@@ -1,82 +1,48 @@
 package Day_10;
 //@p4n.in
 //codeswithpankaj.com
-import java.util.LinkedList;
+import java.util.HashMap;
 
-public class HashTable {
-    private LinkedList<Entry>[] table;
-    private int capacity;
-    
-    public HashTable(int capacity) {
-        this.capacity = capacity;
-        table = new LinkedList[capacity];
-        for (int i = 0; i < capacity; i++) {
-            table[i] = new LinkedList<>();
-        }
-    }
-    
-    public void put(int key, String value) {
-        int index = hash(key);
-        LinkedList<Entry> list = table[index];
-        
-        for (Entry entry : list) {
-            if (entry.getKey() == key) {
-                entry.setValue(value);
-                return;
+class HashTable{
+
+
+        public static void main(String[] arg){
+
+                // create a new hash map instance 
+                HashMap<String, Integer> hashMap = new HashMap<>();
+                // insrting key and value pairs into the hash table 
+                hashMap.put("java",1001);
+                hashMap.put("C++",1002);
+                hashMap.put("C",1003);
+                hashMap.put("Python",1004);
+                hashMap.put("JavaScript",1005);
+
+                // test print
+                System.out.println("test output - \n"+hashMap);
+
+                // accessing value using key 
+
+                System.out.println("course id - "+hashMap.get("java"));
+                System.out.println(" c++ course id "+hashMap.get("C++"));
+
+            //updating value of keys..
+            hashMap.put("C++", 45001);
+            System.out.println("update go in hashmap : "+ hashMap.get("C++"));
+
+            // checking if key exists in the hash table 
+
+            String key = "java";
+            if(hashMap.containsKey(key)){
+                System.out.println(key+"= exists in the hash table... ");
+            }else{
+                System.out.println(key+" = does not exists in the hash table ...");
             }
+            // removing a key value pair from the hash table 
+
+            hashMap.remove("C++");
+            System.out.println("size of the hash table after remove .. "+hashMap.size());
+
         }
-        
-        list.add(new Entry(key, value));
-    }
-    
-    public String get(int key) {
-        int index = hash(key);
-        LinkedList<Entry> list = table[index];
-        
-        for (Entry entry : list) {
-            if (entry.getKey() == key) {
-                return entry.getValue();
-            }
-        }
-        
-        return null;
-    }
-    
-    public void remove(int key) {
-        int index = hash(key);
-        LinkedList<Entry> list = table[index];
-        
-        for (Entry entry : list) {
-            if (entry.getKey() == key) {
-                list.remove(entry);
-                return;
-            }
-        }
-    }
-    
-    private int hash(int key) {
-        return key % capacity;
-    }
-    
-    private class Entry {
-        private int key;
-        private String value;
-        
-        public Entry(int key, String value) {
-            this.key = key;
-            this.value = value;
-        }
-        
-        public int getKey() {
-            return key;
-        }
-        
-        public String getValue() {
-            return value;
-        }
-        
-        public void setValue(String value) {
-            this.value = value;
-        }
-    }
+
+
 }
