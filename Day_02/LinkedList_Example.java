@@ -5,7 +5,6 @@ package Day_02;
 class Node {
  int data;
  Node next;
-
  Node(int value) {
      data = value;
      next = null;
@@ -60,6 +59,7 @@ public class LinkedList_Example {
 
      myList.insertAtBeginning(3);
      myList.insertAtBeginning(2);
+      myList.insertAtBeginning(10);
      myList.insertAtEnd(4);
 
      myList.display(); // Output: 2 3 4
