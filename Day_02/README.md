@@ -6,7 +6,7 @@ Here's an example of creating and using a linked list in Java:
 
 ```java
 //@p4n.in
-public class LinkedListExample {
+public class LinkedListExample{
     // Node class to represent individual nodes in the linked list
     static class Node {
         int data;   // The value stored in the node
